@@ -28,7 +28,7 @@ public class DecisaoIF {
         double precoProduto = sc.nextDouble();
         double desconto;
         if (precoProduto>=200) {
-            desconto = 10.0
+            desconto = 10.0;
         } else if (precoProduto>=100) {
             desconto = 5.0;
         } else { 
