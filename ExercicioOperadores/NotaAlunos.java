@@ -3,8 +3,8 @@ package ExercicioOperadores;
 import java.util.Scanner;
  
 public class NotaAlunos {
+    Scanner sc = new Scanner(System.in);
     public void alunos() {
-        Scanner sc = new Scanner(System.in);
         System.out.println("Digite a primeira Nota do Aluno");
         double nota1 = sc.nextDouble();
         System.out.println("Digite a Segunda Nota do Aluno");

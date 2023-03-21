@@ -9,11 +9,13 @@ public class Exercicio1 {
         double primeiroNumero = sc.nextDouble();
         System.out.println("Informe o Segundo Numero");
         double segundoNumero = sc.nextDouble();
-        if (primeiroNumero>=segundoNumero) { 
+        if (primeiroNumero>segundoNumero) { 
             System.out.println("O maior numero é "+primeiroNumero);
-        }
-        if (segundoNumero>=primeiroNumero) {
+        } else
+        if (segundoNumero>primeiroNumero) {
             System.out.println("O maior numero é "+segundoNumero);
+        } else {
+            System.out.println("Os numeros são iguais");
         }
     }
     public void ex2() {
