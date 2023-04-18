@@ -2,8 +2,7 @@ package IteracaoFor;
 
 public class App {
     public static void main(String[] args) {
-        ExemploFor obj = new ExemploFor();
-        obj.exemplo1();
-        obj.exemplo2();
+        ExercicioFor obj1 = new ExercicioFor();
+        obj1.exercicio5();
     }
 }
