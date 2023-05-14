@@ -91,16 +91,17 @@ public class ListaExtra {
             System.out.println(" A matriz não tem o valor X");
         }
     }
+
     public void exercicio4() {
         int matriz[][] = new int[10][10];
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[0].length; j++) {
                 if (i == j) {
-                    matriz[i][j] = (3*i*i) - 1;
-                } else if ( i > j) {
-                    matriz[i][j] = (4*i*i*i) - (5*j*j);
+                    matriz[i][j] = (3 * i * i) - 1;
+                } else if (i > j) {
+                    matriz[i][j] = (4 * i * i * i) - (5 * j * j);
                 } else {
-                    matriz[i][j] = (2*i) + (7*j) - 2;
+                    matriz[i][j] = (2 * i) + (7 * j) - 2;
                 }
             }
         }
@@ -114,3 +115,27 @@ public class ListaExtra {
         }
         System.out.println("=========================");
     }
+    public void exercicio6() {
+        int matrizA[][] = new int[3][3];
+        int matrizB[][] = new int[3][3];
+        int matrizC[][] = new int[3][3];
+
+        for (int i = 0; i < matrizA.length; i++) {
+            for (int j = 0; j < matrizA[0].length; j++) {
+                matrizA[i][j] = rd.nextInt(10);
+            }
+        }
+
+        for (int i = 0; i < matrizA.length; i++) {
+            for (int j = 0; j < matrizA[0].length; j++) {
+                matrizB[i][j] = rd.nextInt(10);
+            }
+        }
+
+        for (int i = 0; i < matrizA.length; i++) {
+            for (int j = 0; j < matrizA[0].length; j++) {
+                matrizC[i][j] = rd.nextInt(10);
+            }
+        }
+    }
+}
