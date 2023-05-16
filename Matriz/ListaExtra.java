@@ -176,7 +176,9 @@ public class ListaExtra {
 
         for (int i = 0; i < matrizA.length; i++) {
             for (int j = 0; j < matrizA[0].length; j++) {
-                matrizC[i][j] = matrizA[i][j]*matrizB[j][i];
+                for (int j2 = 0; j2 < matrizC.length; j2++) {
+                    matrizC[i][j] += matrizA[i][j2]*matrizB[j2][j];
+                }
             }
         }
 
