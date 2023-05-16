@@ -7,16 +7,16 @@ public class App {
         RegistraAluno aluno2 = new RegistraAluno();
         //setando os atributos do objeto
         aluno1.setNome("Ana Carla Pereira");
-        aluno2.setNome("X Æ A-Xii");
+        aluno2.setNome("Flavinho do Pneu");
         aluno1.setIdade(17);
         aluno2.setIdade(15);
         aluno1.setEndereco("Rua qualquer , Jd. Qualquer coisa , nºX");
         aluno2.setEndereco("Rua Paraguai , Jd. Piaui  , nºX");
         aluno1.setNotaCiencias(8);
-        aluno2.setNotaCiencias(10);
+        aluno2.setNotaCiencias(9.5);
         aluno1.setNotaMatematica(10);
         aluno2.setNotaMatematica(10);
-        aluno1.setNotaPortugues(6);
+        aluno1.setNotaPortugues(6.5);
         aluno2.setNotaPortugues(1);
         //mostrando os atributos com o get
         System.out.println("Nome: "+aluno1.getNome());

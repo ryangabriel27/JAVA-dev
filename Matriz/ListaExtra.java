@@ -122,20 +122,20 @@ public class ListaExtra {
             System.out.print("Escreva o nº de matrícula do aluno " + i + ":");
             matriz[i][0] = sc.nextInt();
         }
-        System.out.println("=================================");                           
+        System.out.println("=================================");
         for (int i = 0; i < matriz.length; i++) {
-            System.out.print("Escreva a média das provas do aluno "+i+":");
+            System.out.print("Escreva a média das provas do aluno " + i + ":");
             matriz[i][1] = sc.nextInt();
         }
         System.out.println("=================================");
         for (int i = 0; i < matriz.length; i++) {
-            System.out.print("Escreva a média dos trabalhos do aluno "+i+":");
+            System.out.print("Escreva a média dos trabalhos do aluno " + i + ":");
             matriz[i][2] = sc.nextInt();
         }
         System.out.println("=================================");
-        for (int i = 0; i < matriz.length; i++) { //calculando as notas finais
-            matriz[i][3] = (matriz[i][1]+matriz[i][2])/2;
-            System.out.println("A nota final do aluno "+i+" é de: "+matriz[i][3]);
+        for (int i = 0; i < matriz.length; i++) { // calculando as notas finais
+            matriz[i][3] = (matriz[i][1] + matriz[i][2]) / 2;
+            System.out.println("A nota final do aluno " + i + " é de: " + matriz[i][3]);
         }
 
         int maiorNota = matriz[0][3];
@@ -147,15 +147,16 @@ public class ListaExtra {
             }
         }
 
-        System.out.println("O nº da matricula do aluno que teve a maior nota é: "+maiorAluno);
+        System.out.println("O nº da matricula do aluno que teve a maior nota é: " + maiorAluno);
 
         double medias = 0;
         for (int i = 0; i < matriz.length; i++) {
             medias += matriz[i][3];
         }
-        double mediaDasMedias = medias/5;
-        System.out.println("A média aritmetica das notas finais é de: "+mediaDasMedias);
+        double mediaDasMedias = medias / 5;
+        System.out.println("A média aritmetica das notas finais é de: " + mediaDasMedias);
     }
+
     public void exercicio6() {
         int matrizA[][] = new int[3][3];
         int matrizB[][] = new int[3][3];
@@ -175,8 +176,37 @@ public class ListaExtra {
 
         for (int i = 0; i < matrizA.length; i++) {
             for (int j = 0; j < matrizA[0].length; j++) {
-                matrizC[i][j] = rd.nextInt(10);
+                matrizC[i][j] = matrizA[i][j]*matrizB[j][i];
             }
         }
+
+        System.out.println("=========================");
+        System.out.println("Matriz A:");
+        for (int i = 0; i < matrizA.length; i++) {
+            System.out.print(" | ");
+            for (int j = 0; j < matrizA[0].length; j++) {
+                System.out.print(" " + matrizA[i][j] + " ");
+            }
+            System.out.println(" | ");
+        }
+        System.out.println("=========================");
+        System.out.println("Matriz B:");
+        for (int i = 0; i < matrizA.length; i++) {
+            System.out.print(" | ");
+            for (int j = 0; j < matrizA[0].length; j++) {
+                System.out.print(" " + matrizB[i][j] + " ");
+            }
+            System.out.println(" | ");
+        }
+        System.out.println("=========================");
+        System.out.println("Matriz C:");
+        for (int i = 0; i < matrizA.length; i++) {
+            System.out.print(" | ");
+            for (int j = 0; j < matrizA[0].length; j++) {
+                System.out.print(" " + matrizC[i][j] + " ");
+            }
+            System.out.println(" | ");
+        }
+        System.out.println("=========================");
     }
 }
