@@ -15,8 +15,8 @@ public class Atividade {
         int nColunas = sc.nextInt();
 
         int matriz[][] = new int[nLinhas][nColunas];
-        for (int i = 0; i < matriz.length; i++) {
-            for (int j = 0; j < matriz[0].length; j++) {
+        for (int i = 0; i < nLinhas; i++) {
+            for (int j = 0; j < nColunas; j++) {
                 matriz[i][j] = rd.nextInt(9);
             }
         }
@@ -62,57 +62,50 @@ public class Atividade {
       while (tenteNovamente) {
         System.out.print("Digite o seu palpite: ");
         nDigitado = sc.nextInt();
-        if (nDigitado == nSorteio) {
-            tenteNovamente = false;
-        }
-        if ( nDigitado != nSorteio) {
-            System.out.println("Errou, tente novamente");
-        }
         if (nDigitado > nSorteio) {
-            System.out.println("*Dica: O número que você digitou é maior que o sorteado");
-        } else {
-            System.out.println("*Dica: O número que você digitou é menor que o sorteado");
+            System.out.println("Errou!!!  *Dica: O número que você digitou é maior que o sorteado");
+        } else if ( nDigitado < nSorteio ) {
+            System.out.println("Errou!!!  *Dica: O número que você digitou é menor que o sorteado");
+        } else {1
+            tenteNovamente = false;
         }
         cont++;
       }
       System.out.println("Parabéns , você acertou em "+cont+" tentativas");
 
     }
-    public void exercicio3() {
-        int tamanhoVetor = (rd.nextInt(900)+100);
-        int vetor[] = new int[tamanhoVetor];
 
+    public void exercicio3() {
+        int tamanhoVetor = (rd.nextInt(900) + 100);
+        int vetor[] = new int[tamanhoVetor];
+        int contPar = 0;
+        int contImpar = 0;
         for (int i = 0; i < vetor.length; i++) {
-            vetor[i] = (rd.nextInt(99)+1);
+            vetor[i] = (rd.nextInt(99) + 1);
         }
 
         System.out.println("Os números pares no vetor são: ");
         for (int i = 0; i < vetor.length; i++) {
-            if (vetor[i]%2 == 0) {
-                System.out.println("vetor["+i+"]= "+vetor[i]);
+            if (vetor[i] % 2 == 0) {
+                System.out.println("vetor[" + i + "]= " + vetor[i]);
+                if (i % 2 == 0) {
+                    contPar++;
+                }
             }
         }
         System.out.println("=======================================");
         System.out.println("Os números ímpares no vetor são:");
         for (int i = 0; i < vetor.length; i++) {
-            if (vetor[i]%2 == 1) {
-                System.out.println("vetor["+i+"]= "+vetor[i]);
+            if (vetor[i] % 2 == 1) {
+                System.out.println("vetor[" + i + "]= " + vetor[i]);
+                if (i % 2 == 1) {
+                    contImpar++;
+                }
             }
         }
-        System.out.println("=============================================");
-        System.out.println("Os números pares nas posições ímpares são:");
-        for (int i = 0; i < vetor.length; i++) {
-            if (vetor[i]%2 == 0 && (i+1)%2 == 1) {
-                System.out.println("Vetor posição: "+(i+1)+" = "+vetor[i]);
-            }
-        }
-        System.out.println("=============================================");
-        System.out.println("Os números ímpares nas posições pares são:");
-        for (int i = 0; i < vetor.length; i++) {
-            if (vetor[i]%2 == 1 && (i+1)%2 == 0) {
-                System.out.println("Vetor posição: "+(i+1)+" = "+vetor[i]);
-            }
-        }
+
+        System.out.println("A quantidade de número pares em posições ímpares é de :" + contPar);
+        System.out.println("A quantidade de número ímpares em posições pares é de :" + contImpar);
     }
 
 }
